@@ -36,6 +36,9 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
+    #INTRO TEXT HERE
+
+
     jump handler
   
     
