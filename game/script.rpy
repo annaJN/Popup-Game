@@ -55,7 +55,6 @@ label handler:
 
 label scene1:
     $ count += 1
-    "This is scene 1"
     show sweden at pos
     "Adopt me please!"
 
