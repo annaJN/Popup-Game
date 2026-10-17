@@ -30,6 +30,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
+    # THIS IS THE BACKGROUND
     scene skrivbord
 
     # This shows a character sprite. A placeholder is used, but you can
@@ -93,7 +94,6 @@ label scene2:
         "Sim":
             $ countyes += 1
             "You adopted the Jaguar!" 
-            "[countyes]"
             
     hide brazil 
     jump handler
