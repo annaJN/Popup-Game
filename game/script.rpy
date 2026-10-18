@@ -14,8 +14,14 @@ define randnum = renpy.random.random
 define pos = Position(xalign=0.2, yalign=0.5)
 #define scenelist = [scene1, scene2, scene3]
 
+#define NotoSansJP = "/fonts/NotoSansJP.ttf"
+
 
 # The game starts here.
+
+#CHARACTERS 
+define jpn = Character("Green Pheasant", what_font="NotoSansJP.ttf")
+define land = Character("Landlord")
 
 label start:
 
@@ -31,7 +37,7 @@ label start:
     # images directory to show it.
 
     # THIS IS THE BACKGROUND
-    scene skrivbord
+    scene background
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -39,7 +45,7 @@ label start:
 
     #INTRO TEXT HERE
 
-    "Landlord: Congradutions on your new home! I hope you will be very happy here! Just three little rules: no smoking, no pets, and no funny business."
+    land "Congradutions on your new home! I hope you will be very happy here! Just three little rules: no smoking, no pets, and no funny business."
     "Of course, I am a very boring and responsible person."
     "(Finally, a place where my biggest problem will only be paying rent!)"
 
@@ -265,8 +271,9 @@ label scene11:
     $ count += 1
     show japan at pos
 
-    "Adopt me please!"
+    jpn "Adopt me please!"
 
+#"{font=NotoSansJP}"いいえ{/font}"
     menu: 
         "いいえ":
             "The Green pheasant left."
@@ -288,12 +295,14 @@ label scene12:
     "Adopt me please!"
 
     menu: 
-        "Yoʻq":
-            "The Sand cat left."
 
         "Ha":
             $ countyes += 1
             "You adopted the Sand cat!" 
+        "Yoʻq":
+            "The Sand cat left."
+
+        
             
     hide uzbekistan 
     jump handler
@@ -329,10 +338,10 @@ label scene14:
     menu: 
         "Oo":
             $ countyes += 1
-            "You adopted the Philippine eagle!" 
+            "You adopted the Carabao buffalo!" 
             
         "Hindi":
-            "The Philippine eagle left."
+            "The Philippine Carabao buffalo left."
 
     hide philippines 
     jump handler
@@ -437,7 +446,7 @@ label scene19:
 
 label scene20: 
     $ count += 1
-    show south korea at pos
+    show southkorea at pos
 
     "Adopt me please!"
 
@@ -449,7 +458,7 @@ label scene20:
             $ countyes += 1
             "You adopted the Siberian tiger!" 
             
-    hide south korea
+    hide southkorea
     jump handler
 
     return
@@ -474,7 +483,7 @@ label scene21:
     return
 
 label scene_all_no_result: 
-    show scene_all_no_result at pos
+    show scene_all_no_result
 
     "Crisis resolved! I still have a roof over my head!"
     "And absolutly no one to talk to!"
@@ -488,7 +497,7 @@ label scene_all_no_result:
 label scene_up_to_3_result: 
     show scene_up_to_3_result at pos
 
-    "Three animals. That's managable! Nobody will ever know!"
+    "A few animals. That's managable! Nobody will ever know!"
             
     hide scene_up_to_3_result
 

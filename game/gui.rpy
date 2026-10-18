@@ -56,8 +56,21 @@ define gui.interface_text_color = '#404040'
 
 ## Fonts and Font Sizes ########################################################
 
+init python:
+    globalFont = FontGroup()
+    globalFont = globalFont.add("DejaVuSans.ttf", None, None)
+    globalFont = globalFont.add("fonts/NotoSansJP.ttf", 0x3000,0x9fff) #Japan
+    globalFont = globalFont.add("fonts/PakTypeNaqsh.ttf", 0x0600,0x08ff) #Pakistan
+
+    globalFont = globalFont.add("fonts/NotoSansEthiopic.ttf", 0x1200, 0x139f) #Ethiopia
+    globalFont = globalFont.add("fonts/Poppins.ttf", 0x0900, 0x097f) #Nepal
+    globalFont = globalFont.add("fonts/NotoSansThai.ttf", 0x0e00, 0x0e7f) #Thailand
+    globalFont = globalFont.add("fonts/NotoSansMyanmar.ttf", 0x1000, 0x109f) #Myanma
+    globalFont = globalFont.add("fonts/NotoSansKR.ttf", 0xac00, 0xd7af) #Korea
+    globalFont = globalFont.add("fonts/NotoSansSC.ttf", 0x4e00, 0x9fff) #China (mandarin)
+
 ## The font used for in-game text.
-define gui.text_font = "DejaVuSans.ttf"
+define gui.text_font = globalFont
 
 ## The font used for character names.
 define gui.name_text_font = "DejaVuSans.ttf"
