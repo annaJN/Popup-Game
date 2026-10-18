@@ -46,6 +46,7 @@ label start:
 
     #INTRO TEXT HERE
 
+    play music "andriih-chill-chill-music-614318.mp3"
     land "Congradutions on your new home! I hope you will be very happy here! Just three little rules: no smoking, no pets, and no funny business."
     "Of course, I am a very boring and responsible person."
     t "Finally, a place where my biggest problem will only be paying rent!"
@@ -56,6 +57,7 @@ label start:
     "Oh, someone is knocking on the door. Is the landlord back?"
     "Oh!!"
     "Where did all of these animals come from?"
+    play music "andriih-cute-cats-pets-music-613347.mp3"
 
     scene dooropen 
     jump handler
@@ -240,7 +242,7 @@ label scene8:
 
 label scene9: 
     $ count += 1
-    show south africa at pos
+    show southafrica at pos
 
     "Adopt me please!"
 
@@ -252,7 +254,7 @@ label scene9:
             $ countyes += 1
             "You adopted the Springbok!" 
             
-    hide south africa 
+    hide southafrica 
     jump handler
 
     return
@@ -510,6 +512,7 @@ label scene_up_to_3_result:
 
 label scene_more_than_3_result: 
     scene homeless
+    play music "andriih-sad-sad-music-601661.mp3"
 
     "Well, I am homeless now."
     "Animals: So... can you adopt us now?"
