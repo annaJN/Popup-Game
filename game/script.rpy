@@ -11,7 +11,7 @@ define randnum = renpy.random.random
 
 #define randpos = Position(xalign=randnum, yalign=randnum)
 
-define pos = Position(xalign=0.2, yalign=0.5)
+define pos = Position(xalign=0.5, yalign=0.5)
 #define scenelist = [scene1, scene2, scene3]
 
 #define NotoSansJP = "/fonts/NotoSansJP.ttf"
@@ -20,8 +20,8 @@ define pos = Position(xalign=0.2, yalign=0.5)
 # The game starts here.
 
 #CHARACTERS 
-define jpn = Character("Green Pheasant", what_font="NotoSansJP.ttf")
 define land = Character("Landlord")
+define t = Character(what_font="Montserrat.ttf")
 
 label start:
 
@@ -38,6 +38,7 @@ label start:
 
     # THIS IS THE BACKGROUND
     scene background
+    
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -47,8 +48,16 @@ label start:
 
     land "Congradutions on your new home! I hope you will be very happy here! Just three little rules: no smoking, no pets, and no funny business."
     "Of course, I am a very boring and responsible person."
-    "(Finally, a place where my biggest problem will only be paying rent!)"
+    t "Finally, a place where my biggest problem will only be paying rent!"
 
+    scene knocking
+    "Knock knock"
+    #Add sound effect
+    "Oh, someone is knocking on the door. Is the landlord back?"
+    "Oh!!"
+    "Where did all of these animals come from?"
+
+    scene dooropen 
     jump handler
   
     
@@ -77,12 +86,12 @@ label scene1:
     show sweden at pos
     "Adopt me please!"
 
-    "I really can't adopt any animals."
-    "No, I can't adopt you."
+    t "I really can't adopt any animals. The land lord will evict me."
+    "No, I'm sorry I can't adopt you."
 
-    "The Moose looks at you confused."
+    t "The Moose looks at you confused."
 
-    "Ah, maybe I need to say it in their native language. Hmmm What was it again."
+    t"Ah, maybe I need to say it in their native language. Hmmm What was it again."
  
     menu: 
             "Ja":
@@ -271,9 +280,8 @@ label scene11:
     $ count += 1
     show japan at pos
 
-    jpn "Adopt me please!"
+    "Adopt me please!"
 
-#"{font=NotoSansJP}"いいえ{/font}"
     menu: 
         "いいえ":
             "The Green pheasant left."
@@ -483,35 +491,30 @@ label scene21:
     return
 
 label scene_all_no_result: 
-    show scene_all_no_result
+    scene background
 
     "Crisis resolved! I still have a roof over my head!"
     "And absolutly no one to talk to!"
     "Maybe I should get some plants?"
     "Wait. Do plants count as animals?"
-            
-    hide scene_all_no_result
-
     return
 
 label scene_up_to_3_result: 
-    show scene_up_to_3_result at pos
+    scene hiddenanimals
 
     "A few animals. That's managable! Nobody will ever know!"
+    "Right?"
             
-    hide scene_up_to_3_result
 
     return
 
 label scene_more_than_3_result: 
-    show scene_more_than_3_result at pos
+    scene homeless
 
     "Well, I am homeless now."
     "Animals: So... can you adopt us now?"
     "I AM LIVING IN A SMALL TENT!"
     "Animals: is it pet friendly?"
     "I guess I am going to need a bigger tent! "
-            
-    hide scene_more_than_3_result
 
     return
