@@ -11,7 +11,7 @@ define randnum = renpy.random.random
 
 #define randpos = Position(xalign=randnum, yalign=randnum)
 
-define pos = Position(xalign=0.5, yalign=0.5)
+define pos = Position(xalign=0.5, ypos=-0.1)
 #define scenelist = [scene1, scene2, scene3]
 
 #define NotoSansJP = "/fonts/NotoSansJP.ttf"
@@ -47,11 +47,13 @@ label start:
     #INTRO TEXT HERE
 
     play music "andriih-chill-chill-music-614318.mp3"
+
     land "Congradutions on your new home! I hope you will be very happy here! Just three little rules: no smoking, no pets, and no funny business."
     "Of course, I am a very boring and responsible person."
     t "Finally, a place where my biggest problem will only be paying rent!"
 
     scene knocking
+    
     "Knock knock"
     #Add sound effect
     "Oh, someone is knocking on the door. Is the landlord back?"
@@ -85,7 +87,8 @@ label handler:
 
 label scene1:
     $ count += 1
-    show sweden at pos
+    show sweden at pos:
+        zoom 1.5
     "Adopt me please!"
 
     t "I really can't adopt any animals. The land lord will evict me."
@@ -109,7 +112,8 @@ label scene1:
 
 label scene2: 
     $ count += 1
-    show brazil at pos
+    show brazil at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -128,7 +132,8 @@ label scene2:
 
 label scene3: 
     $ count += 1
-    show kenya at pos
+    show kenya at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -147,7 +152,8 @@ label scene3:
 
 label scene4: 
     $ count += 1
-    show turkey at pos
+    show turkey at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -166,7 +172,8 @@ label scene4:
 
 label scene5: 
     $ count += 1
-    show samoa at pos
+    show samoa at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -185,7 +192,8 @@ label scene5:
 
 label scene6: 
     $ count += 1
-    show germany at pos
+    show germany at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -204,7 +212,8 @@ label scene6:
 
 label scene7: 
     $ count += 1
-    show slovakia at pos
+    show slovakia at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -223,7 +232,8 @@ label scene7:
 
 label scene8: 
     $ count += 1
-    show spain at pos
+    show spain at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -242,7 +252,8 @@ label scene8:
 
 label scene9: 
     $ count += 1
-    show southafrica at pos
+    show southafrica at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -261,7 +272,8 @@ label scene9:
 
 label scene10: 
     $ count += 1
-    show france at pos
+    show france at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -280,7 +292,8 @@ label scene10:
 
 label scene11: 
     $ count += 1
-    show japan at pos
+    show japan at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -300,7 +313,8 @@ label scene11:
 
 label scene12: 
     $ count += 1
-    show uzbekistan at pos
+    show uzbekistan at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -322,7 +336,8 @@ label scene12:
 
 label scene13: 
     $ count += 1
-    show greece at pos
+    show greece at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -341,7 +356,8 @@ label scene13:
 
 label scene14: 
     $ count += 1
-    show philippines at pos
+    show philippines at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -360,7 +376,8 @@ label scene14:
 
 label scene15: 
     $ count += 1
-    show pakistan at pos
+    show pakistan at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -380,7 +397,8 @@ label scene15:
 
 label scene16: 
     $ count += 1
-    show eritrea at pos
+    show eritrea at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -399,7 +417,8 @@ label scene16:
 
 label scene17: 
     $ count += 1
-    show nepal at pos
+    show nepal at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -418,7 +437,8 @@ label scene17:
 
 label scene18: 
     $ count += 1
-    show thailand at pos
+    show thailand at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -437,7 +457,8 @@ label scene18:
 
 label scene19: 
     $ count += 1
-    show myanmar at pos
+    show myanmar at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -456,7 +477,8 @@ label scene19:
 
 label scene20: 
     $ count += 1
-    show southkorea at pos
+    show southkorea at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -475,7 +497,8 @@ label scene20:
 
 label scene21: 
     $ count += 1
-    show china at pos
+    show china at pos:
+        zoom 1.5
 
     "Adopt me please!"
 
@@ -503,6 +526,8 @@ label scene_all_no_result:
 
 label scene_up_to_3_result: 
     scene hiddenanimals
+    play music "andriih-funny-funny-music-585934.mp3"
+    
 
     "A few animals. That's managable! Nobody will ever know!"
     "Right?"
