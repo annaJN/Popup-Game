@@ -53,9 +53,8 @@ label start:
     t "Finally, a place where my biggest problem will only be paying rent!"
 
     scene knocking
-    
+    play sound "soundreality-door-knocking-175163.mp3"
     "Knock knock"
-    #Add sound effect
     "Oh, someone is knocking on the door. Is the landlord back?"
     "Oh!!"
     "Where did all of these animals come from?"
