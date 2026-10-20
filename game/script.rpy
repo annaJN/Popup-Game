@@ -79,6 +79,8 @@ label handler:
         jump scene_all_no_result
     elif countyes <= 3:
         jump scene_up_to_3_result
+    elif countyes == 21:
+        jump adopt_all_result
     else:
         jump scene_more_than_3_result
 
@@ -543,5 +545,14 @@ label scene_more_than_3_result:
     "I AM LIVING IN A SMALL TENT!"
     "Animals: is it pet friendly?"
     "I guess I am going to need a bigger tent! "
+
+    return
+
+label adopt_all_result:
+    scene allanimals
+    "You ended up adopting all the animals. It was hard to say no to allt these cuties."
+    "To your suprise, the landlord did not kick you out!"
+    "They helped you turn the appartment into a zoo and now you do not even have to worry about paying rent. The Zoo covers it."
+    "And on top of that, now the entire building is pet friendly!"
 
     return
